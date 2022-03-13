@@ -1,0 +1,269 @@
+<!-- For Add to All plugin -->
+<style>
+    :root {
+        --blue: #00517b;
+    }
+    #mc_embed_signup h2 {
+        font-size:30px !important;
+        margin-bottom:15px;
+        color:black;
+    }
+    #mc_embed_signup p {
+        color:black;
+    }
+    #mc_embed_signup h2, p {
+        line-height:1.5;
+    }
+    #timestamp {
+        display:none;
+    }
+    #mc_embed_signup .input-field {
+        position: relative;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #9e9e9e;
+        border-radius: 0;
+        outline: none;
+        width: 100%;
+        margin: 0 0 8px 0;
+        padding: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-transition: border .3s, -webkit-box-shadow .3s;
+        transition: border .3s, -webkit-box-shadow .3s;
+        transition: box-shadow .3s, border .3s;
+        transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+    }
+    label {
+        font-size: .8rem;
+        color:black;
+    }
+    .input-field>label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+        cursor: text;
+        -webkit-transition: color .2s ease-out, -webkit-transform .2s ease-out;
+        transition: color .2s ease-out, -webkit-transform .2s ease-out;
+        transition: transform .2s ease-out, color .2s ease-out;
+        transition: transform .2s ease-out, color .2s ease-out, -webkit-transform .2s ease-out;
+        -webkit-transform-origin: 0% 100%;
+        transform-origin: 0% 100%;
+        text-align: initial;
+        -webkit-transform: translateY(12px);
+        transform: translateY(12px);
+    }
+    input:not([type]).validate+label, input[type=text]:not(.browser-default).validate+label, input[type=password]:not(.browser-default).validate+label, input[type=email]:not(.browser-default).validate+label, input[type=url]:not(.browser-default).validate+label, input[type=time]:not(.browser-default).validate+label, input[type=date]:not(.browser-default).validate+label, input[type=datetime]:not(.browser-default).validate+label, input[type=datetime-local]:not(.browser-default).validate+label, input[type=tel]:not(.browser-default).validate+label, input[type=number]:not(.browser-default).validate+label, input[type=search]:not(.browser-default).validate+label, textarea.materialize-textarea.validate+label {
+        width: 100%;
+    }
+
+    #mc_embed_signup input:not([type]):focus:not([readonly])+label, #mc_embed_signup input[type=text]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=password]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=email]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=url]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=time]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=date]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=datetime]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=tel]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=number]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup input[type=search]:not(.browser-default):focus:not([readonly])+label, #mc_embed_signup textarea.materialize-textarea:focus:not([readonly])+label {
+        color: var(--blue);
+    }
+    #mc_embed_signup input:not([type]):focus:not([readonly]), #mc_embed_signup input[type=text]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=password]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=email]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=url]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=time]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=date]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=datetime]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=datetime-local]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=tel]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=number]:not(.browser-default):focus:not([readonly]), #mc_embed_signup input[type=search]:not(.browser-default):focus:not([readonly]), #mc_embed_signup textarea.materialize-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid var(--blue);
+        -webkit-box-shadow: 0 1px 0 0 (--blue);
+        box-shadow: 0 1px 0 0 (--blue);
+    }
+
+    .input-field>label:not(.label-icon).active {
+        -webkit-transform: translateY(-14px) scale(0.8);
+        transform: translateY(-14px) scale(0.8);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+
+    #ticket-form textarea {
+        line-height: 1.5;
+        overflow-y: hidden;
+        padding: 0.8rem 0 0.8rem 0;
+        resize: none;
+        min-height: 3rem;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    p.form-heading {
+        font-size:16px;
+    }
+
+    #ticket-form button, input[type=file]::file-selector-button{
+        text-decoration: none;
+        color: #fff;
+        background-color:#102213;
+        text-align: center;
+        letter-spacing: .5px;
+        -webkit-transition: background-color .2s ease-out;
+        transition: background-color .2s ease-out;
+        cursor: pointer;
+        font-size: 16px;
+        outline: 0;
+        border-radius: 2px;
+        display: inline-block;
+        height: 42px;
+        line-height: 36px;
+        padding: 0 16px;
+        text-transform: uppercase;
+        vertical-align: middle;
+        -webkit-tap-highlight-color: transparent;
+        border: none;
+        box-sizing:border-box;
+        width:160px;
+        font-size: 0.875rem;
+	    height: 30px !important;
+	    line-height: 30px !important;
+    }
+    #mc_embed_signup button:hover, input[type=file]::file-selector-button:hover {
+        background-color:#0078b3;
+    }
+    input[type=file]::file-selector-button{
+        margin-right:15px;
+    }
+    label[for="attach-file"] {
+        position:relative;
+        padding-top:2px;
+    }
+    .input-field .helper-text {
+        position: relative;
+        min-height: 18px;
+        display: block;
+        font-size: 12px;
+        color: #F44336;
+        display:none;
+        top:-8px;
+    }
+    #ticket-form .input-field.invalid input, #ticket-form .input-field.invalid textarea {
+        border-bottom: 1px solid #F44336;
+        -webkit-box-shadow: 0 1px 0 0 #f44336;
+        box-shadow: 0 1px 0 0 #f44336;
+    }
+    input:disabled:not([type="file"]), textarea:disabled {
+        color: rgba(0,0,0,0.42) !important;
+        border-bottom: 1px dotted rgba(0,0,0,0.42) !important;
+    }
+
+    input:disabled + label:not(label[for="attach-file"]), textarea:disabled + label {
+        color:rgba(0,0,0,0.42) !important;
+    }
+    button[disabled], input[type=file][disabled]::file-selector-button {
+        pointer-events: none;
+        background-color: #DFDFDF !important;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        color: #9F9F9F !important;
+        cursor: default;
+    }
+</style>
+
+<script>
+	var html = '<div id="mc_embed_signup"><form action="https://uccmc.us14.list-manage.com/subscribe/post?u=de234383a27f864c21c687757&amp;id=30d9bf3caf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> <div id="mc_embed_signup_scroll"><h2>Receive UCCMC updates</h2><div class="input-field mc-field-group"><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"><label for="mce-EMAIL">Email address <span class="asterisk">*</span></label></div><div class="input-field mc-field-group" style="width:calc(50% - 10px);float:left;margin-right:10px"><input type="text" value="" name="FNAME" class="" id="mce-FNAME"><label for="mce-FNAME">First name </label></div><div class="input-field mc-field-group" style="width:calc(50% - 10px);float:left;margin-left:10px;"><input type="text" value="" name="LNAME" class="" id="mce-LNAME"><label for="mce-LNAME">Last name </label></div><div id="mce-responses" class="clear foot"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_de234383a27f864c21c687757_30d9bf3caf" tabindex="-1" value=""></div><div class="optionalParent"> <div class="clear foot"> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></div></div></form></div>';
+
+    var ukrHTML = '<div id="mc_embed_signup"><form action="https://uccmc.us14.list-manage.com/subscribe/post?u=de234383a27f864c21c687757&amp;id=30d9bf3caf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> <div id="mc_embed_signup_scroll"><h2>Отримуйте новини від УККМЦ</h2><div class="input-field mc-field-group"><input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"><label for="mce-EMAIL">Емейл<span class="asterisk">*</span></label></div><div class="input-field mc-field-group" style="width:calc(50% - 10px);float:left;margin-right:10px"><input type="text" value="" name="FNAME" class="" id="mce-FNAME"><label for="mce-FNAME">Ім&rsquo;я</label></div><div class="input-field mc-field-group" style="width:calc(50% - 10px);float:left;margin-right:10px;"><input type="text" value="" name="LNAME" class="" id="mce-LNAME"><label for="mce-LNAME">Прізвище </label></div><div id="mce-responses" class="clear foot"><div class="response" id="mce-error-response" style="display:none"></div><div class="response" id="mce-success-response" style="display:none"></div></div><div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_de234383a27f864c21c687757_30d9bf3caf" tabindex="-1" value=""></div><div class="optionalParent"> <div class="clear foot"> <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div></div></div></form></div>';
+
+	(function($){
+		$(document).ready(function(){
+			
+			$(".custom-logo").removeAttr("srcset").attr("src","http://uccmc.org/wp-content/uploads/2022/03/logo.png");
+
+            var slug = window.location.href.split("https://uccmc.org")[1];
+            
+            if (slug.includes("/ukr/") || slug.includes("/home-ukr/") || slug.includes("/category/%D0%B7%D0%B2%D0%B5%D1%80%D0%BD%D0%B5%D0%BD%D0%BD%D1%8F/") || slug.includes("/category/%D1%81%D1%82%D0%B0%D1%82%D1%82%D1%96/") || slug.includes("/category/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/")){
+
+                $("ul#menu-primary-menu li a:contains('Home')").html("Домівка").attr("href","https://uccmc.org/home-ukr");
+                $("ul#menu-primary-menu li a:contains('About')").html("Про нас");
+                $("ul#menu-primary-menu li a:contains('News')").html("Новини").attr("href","https://uccmc.org/category/новини");
+                $("ul#menu-primary-menu li a:contains('Statements')").html("Звернення").attr("href","https://uccmc.org/category/звернення");
+                $("ul#menu-primary-menu li a:contains('Stories')").html("Статті").attr("href","https://uccmc.org/category/статті");
+                $(".vmagazine-lite-ticker-caption span").html("Останні новини");
+                $(".vmagazine-lite-search-form-primary input[type='search'").attr("placeholder", "Пошук...");
+
+                var cats = {"News":"Новини", "Statements":"Звернення", "Stories":"Статті", "Featured":"представлені"};
+
+                $(".cat-links a").each(function(){
+                    
+                    var cat = $(this).html();
+                    $(this).html(cats[cat]);
+
+                    if ($(this).text() == "ukr"){
+                        $(this).hide();
+                    }
+                });
+
+                var months = {"January":"січень", "February":"лютий", "March":"березень", "April":"квітень", "May":"травень", "June":"червень", "July":"липень", "August":"серпень", "September":"вересень", "October":"жовтень", "November":"листопад", "December":"грудень"};
+
+                $(".posted-on").each(function(){
+
+                    var month = months[$(this).text().split(" ")[0]];
+                    var date = $(this).text().split(" ")[1].replace(",", "");
+                    var year = $(this).text().split(" ")[2];
+
+                    $(this).html(date + " " + month + ", " + year);
+                });
+							
+				var en = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="#B22334" d="M35.445 7C34.752 5.809 33.477 5 32 5H18v2h17.445zM0 25h36v2H0zm18-8h18v2H18zm0-4h18v2H18zM0 21h36v2H0zm4 10h28c1.477 0 2.752-.809 3.445-2H.555c.693 1.191 1.968 2 3.445 2zM18 9h18v2H18z"/><path fill="#EEE" d="M.068 27.679c.017.093.036.186.059.277.026.101.058.198.092.296.089.259.197.509.333.743L.555 29h34.89l.002-.004c.135-.233.243-.483.332-.741.034-.099.067-.198.093-.301.023-.09.042-.182.059-.275.041-.22.069-.446.069-.679H0c0 .233.028.458.068.679zM0 23h36v2H0zm0-4v2h36v-2H18zm18-4h18v2H18zm0-4h18v2H18zM0 9c0-.233.03-.457.068-.679C.028 8.542 0 8.767 0 9zm.555-2l-.003.005L.555 7zM.128 8.044c.025-.102.06-.199.092-.297-.034.098-.066.196-.092.297zM18 9h18c0-.233-.028-.459-.069-.68-.017-.092-.035-.184-.059-.274-.027-.103-.059-.203-.094-.302-.089-.258-.197-.507-.332-.74.001-.001 0-.003-.001-.004H18v2z"/><path fill="#3C3B6E" d="M18 5H4C1.791 5 0 6.791 0 9v10h18V5z"/><path fill="#FFF" d="M2.001 7.726l.618.449-.236.725L3 8.452l.618.448-.236-.725L4 7.726h-.764L3 7l-.235.726zm2 2l.618.449-.236.725.617-.448.618.448-.236-.725L6 9.726h-.764L5 9l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L9 9l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L13 9l-.235.726zm-8 4l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L5 13l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L9 13l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L13 13l-.235.726zm-6-6l.618.449-.236.725L7 8.452l.618.448-.236-.725L8 7.726h-.764L7 7l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L11 7l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L15 7l-.235.726zm-12 4l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L3 11l-.235.726zM6.383 12.9L7 12.452l.618.448-.236-.725.618-.449h-.764L7 11l-.235.726h-.764l.618.449zm3.618-1.174l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L11 11l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L15 11l-.235.726zm-12 4l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L3 15l-.235.726zM6.383 16.9L7 16.452l.618.448-.236-.725.618-.449h-.764L7 15l-.235.726h-.764l.618.449zm3.618-1.174l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L11 15l-.235.726zm4 0l.618.449-.236.725.617-.448.618.448-.236-.725.618-.449h-.764L15 15l-.235.726z"/></svg>';
+
+				//$("#menu-primary-menu").append("<li class='menu-item'><a href='/'>" + en + "English</a></li>");
+
+                $(".footer-desc").html(ukrHTML);
+
+                //If is a post page 
+                if (slug.includes("/ukr/")){
+                    $(".title-bg").html("Останні повідомлення");
+                    $(".nav-previous span").html("попередня стаття");
+                    $(".nav-next span").html("наступна стаття");
+                    $("#search-2 input[type='search']").attr("placeholder", "Пошук");
+                }   
+
+                if (slug.includes("/category/")){
+                    $(".title-bg").html("Останні повідомлення");
+                    var title = $(".page-title").html();
+                    var titleSplit = title.split(": ")[1];
+                    $(".page-title").html("категорія: " + titleSplit);
+                    $("a[rel='home'] span").html("додому");
+                    $("#search-2 input[type='search']").attr("placeholder", "Пошук");
+                    $("<style type='text/css'> .trail-items li:first-of-type:after { margin-right:3px; } </style>").appendTo("head");
+                    $(".trail-item").eq(1).hide();
+                    $(".vmagazine-lite-archive-more").html("Детальніше");
+                }
+
+            } else {
+				
+                var ukr = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path fill="#005BBB" d="M32 5H4C1.791 5 0 6.791 0 9v9h36V9c0-2.209-1.791-4-4-4z"/><path fill="#FFD500" d="M36 27c0 2.209-1.791 4-4 4H4c-2.209 0-4-1.791-4-4v-9h36v9z"/></svg>';
+
+				//$("#menu-primary-menu").append("<li class='menu-item'><a style='color:rgba(0,0,0,0.9)' href='/home-ukr/'>" + ukr + "Українською</a></li>");
+
+                $(".footer-desc").html(html);
+            }
+
+			//Add active labels
+			$("#mc_embed_signup input, #ticket-form textarea").focus(function(){
+	            $(this).siblings('label').addClass('active');
+	        })
+	        .blur(function(){
+	            if (!$(this).val()){
+	                $(this).siblings('label').removeClass('active');
+	            }
+	        });
+
+	        //Allow clicking in text box on labels 
+		    $("input, textarea").siblings("label").on("click",function(){
+		        $(this).addClass("active");
+		        $(this).prev().focus();
+		    });
+
+		    $(".footer-credit").html("<p><a href='https://laurenshutt.dev' target='_blank'>Developer website</a></p>");
+		    $(".footer-nav").html("<p>&copy; " + new Date().getFullYear() + " Ukrainian Catholic Crisis Media Center.&nbsp;&nbsp;|&nbsp;&nbsp;<a href='mailto:info@uccmc.org'>info@uccmc.org</a></p>");
+		});
+	}(jQuery));
+</script>
+<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+<script type="text/javascript">
+	(function($){window.fnames=new Array(); window.ftypes=new Array();fnames[0]="EMAIL";ftypes[0]="email";fnames[1]="FNAME";ftypes[1]="text";fnames[2]="LNAME";ftypes[2]="text";fnames[3]="ADDRESS";ftypes[3]="address";fnames[4]="PHONE";ftypes[4]="phone";fnames[5]="BIRTHDAY";ftypes[5]="birthday";}(jQuery));var $mcj=jQuery.noConflict(true);
+</script>
