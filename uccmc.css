@@ -1,0 +1,240 @@
+/* Goes in the additional CSS part */
+
+/*Fix link color*/
+header.header-layout1 nav.main-navigation .nav-wrapper .menu-mmnu-container ul li.menu-item a:focus, header.header-layout3 nav.main-navigation .nav-wrapper .menu-mmnu-container ul li.menu-item a:focus, a:focus {
+	color:#2158ae;
+}
+
+.top-menu .menu, .index-icon, .comments, #submission-form .widget-title, .fa.fa-clock-o, .social, .site-info, #static-resources, #youtube {
+	display:none !important;
+}
+
+/* Search form */
+input[type=search]:not(.browser-default) {
+	height:2rem !important;
+}
+
+header.header-layout1 .vmagazine-lite-top-header .vmagazine-lite-search-form-primary form.search-form:after, header.header-layout3 .vmagazine-lite-top-header .vmagazine-lite-search-form-primary form.search-form:after {
+	margin-top:-4px;
+}
+
+.header-layout1 .vmagazine-lite-ticker-wrapper .default-layout {
+    border-top: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* For the translation buttons */
+.menu-item svg {
+	vertical-align: middle;
+    display: inline;
+    width: 18px;
+    margin-top: -3px;
+    margin-right: 10px;
+}
+
+.menu ul {
+	margin-bottom:0 !important;
+}
+
+/* Youtube background */
+.youtube-container {
+  	height:100%;
+  	position:relative;
+  	overflow:hidden;
+}
+
+.youtube {
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	left:0;
+	pointer-events:none;
+	width:100vw;
+	height:56.25vw;
+}
+
+.widget .custom-html-widget {
+	background:transparent;
+	color:white
+}
+
+/* Stop animations */
+.post-img a.thumb-zoom:before, .entry-thumb a.thumb-zoom:before, .post-thumb a.thumb-zoom:before {
+	background:unset;
+}
+
+.post-img:hover a.thumb-zoom .image-overlay, .entry-thumb:hover a.thumb-zoom .image-overlay, .post-thumb:hover a.thumb-zoom .image-overlay {
+	visibility:hidden;
+}
+
+/* Fix for the stupid grid */
+#panel-16-1-0-0, #panel-16-1-0-1, #panel-16-1-0-2, #panel-13-1-0-0, #panel-13-1-0-1, #panel-13-1-0-2, #panel-361-1-0-0, #panel-361-1-0-1, #panel-361-1-0-2  {
+	float:left;
+	width:calc(33.3333% - ( 0.66666666666667 * 30px ) );
+}
+#panel-16-1-0-0, #panel-16-1-0-1, #panel-13-1-0-0, #panel-13-1-0-1, #panel-361-1-0-0, #panel-361-1-0-1 {
+	margin-right:calc(0.66666666666667 * 30px );
+}
+
+#panel-16-3-0-0, #panel-16-3-0-1 {
+	width:50%;
+	float:left;
+}
+
+/* Custom more links in columns */
+.more {
+	margin-top:20px;
+	color:#00517b;
+}
+
+.more:after {
+	content:' →'
+}
+
+/* Lets the mute/unumte button display inline */
+#panel-13-0-0-0 > div > div.slick-wrap.sl-before-load.slick-initialized.slick-slider > div > div > div.single-post.clearfix.slick-slide.slick-current.slick-active > div.post-content-wrapper.clearfix > h3 > a {
+	display:unset !important;
+}
+
+/* Mute/unmute button */
+.vmagazine-lite-fullwid-slider.block_layout_2 .slick-wrap.slick-initialized.slick-slider .slick-list .slick-track .single-post h3 svg {
+	max-width:2rem;
+	vertical-align: middle;
+  	margin-top: -5px;
+  	margin-left: 10px;
+}
+
+/*Nav fixes*/
+@media screen and (min-width: 1200px){
+	img.custom-logo {
+	    width: 700px !important;
+	}
+}
+header.header-layout1 .vmagazine-lite-top-header .top-men-wrap:before {
+	display:none;
+}
+
+/* MailChimp button */
+#mc-embedded-subscribe{
+	background:#14376c;
+	color:white;
+	border:none;
+	text-transform:uppercase;
+	padding:0 16px;
+	border-radius:2px;
+	height:30px;
+	line-height:30px;
+	width:160px;
+	font-size:0.875rem;
+}
+
+/* Footer */
+.footer-one.site-footer .middle-footer-wrap {
+	background:white;
+}
+.middle-footer-wrap .middle-ftr-wrap .footer-logo-wrap, .middle-footer-wrap .middle-ftr-wrap .footer-desc, .middle-footer-wrap .middle-ftr-wrap .footer-social {
+	flex-basis:35%;
+}
+.middle-footer-wrap .middle-ftr-wrap {
+	justify-content: space-evenly;
+}
+
+footer .buttom-footer.footer_one .footer-btm-wrap {
+	background: #151515;
+}
+
+a.scrollup, a.scrollup:focus, a.scrollup:hover {
+	background:rgb(232, 187, 64);
+}
+
+.footer-credit a:hover, .footer-credit a:focus {
+	color:white;
+}
+
+/* Mobile styling */
+@media screen and (max-width: 768px){
+	#panel-16-1-0-0, #panel-16-1-0-1, #panel-16-1-0-2, #panel-13-1-0-0, #panel-13-1-0-1, #panel-13-1-0-2, #panel-361-1-0-0, #panel-361-1-0-1, #panel-361-1-0-2 {
+		float:unset;
+		width:100%;
+	}
+
+	#panel-13-0-0-0 > div > div.slick-wrap.sl-before-load.slick-initialized.slick-slider > div > div > div.single-post.clearfix.slick-slide.slick-current.slick-active > div.post-thumb {
+		position: relative;
+    	width: 100%;
+    	padding-bottom: 56.25%;
+    	height: calc(100vw / 9) !important;
+	}
+
+	#pg-13-0 > div .post-thumb {
+		height: calc(100vw / 9) !important;
+	}
+
+	.youtube-container {
+		height:unset;
+		position: unset;
+    	overflow: unset;
+	}
+
+	.youtube {
+		position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	    border: 0;
+	    transform:unset;
+	}
+
+	.vmagazine-lite-fullwid-slider.block_layout_2 .single-post .post-content-wrapper {
+		text-align:left;
+	}
+
+	.cat-links, .post-meta {
+		margin-left:15%;
+	}
+
+	.vmagazine-lite-fullwid-slider.block_layout_2 .single-post .post-content-wrapper h3.extra-large-font {
+		max-width: 70%;
+	}
+
+	.post-img, .post-thumb, .entry-thumb {
+		max-height:275px;
+	}
+
+	.middle-footer-wrap .middle-ftr-wrap {
+		padding-left: 0;
+    	display: unset;
+    	-ms-flex-align: unset;
+    	-webkit-align-items: unset; 
+    	-webkit-box-align: unset; 
+    	align-items: unset; 
+    	-webkit-flex-flow: unset; 
+    	justify-content: unset; 
+	}
+
+	.footer-logo-wrap a img {
+		width:75%;
+		padding-top:30px;
+	}
+
+	.footer-desc {
+		width: 85%;
+    	margin-left: auto;
+    	margin-right: auto;
+    	padding-top:40px;
+	}
+}
+
+@media screen and (min-width:700px) and (max-width:1200px){
+	.site-branding a img.custom-logo {
+		max-width:80%;
+	}
+}
+
+@media screen and (max-width: 600px){
+	.vmagazine-lite-fullwid-slider.block_layout_2 .slick-wrap.slick-initialized.slick-slider .slick-list .slick-track .single-post h3 svg {
+		max-width: 1.75rem;
+		margin-left:5px;
+	}
+}
